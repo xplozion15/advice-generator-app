@@ -75,7 +75,7 @@ body {
 }
 
 
-.button-container:hover {
+.button-container:active {
     box-shadow: 0 0 8px 3px hsl(150, 100%, 66%), 0 0 16px 6px hsl(150, 100%, 66%);
 }
 
