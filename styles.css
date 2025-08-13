@@ -1,12 +1,13 @@
 :root {
-    --main-bg-color:hsl(218, 23%, 16%);
-    --secondary-bg-color : hsl(217, 19%, 24%);
-    --main-text-color : white;
-    --main-font-size: 25px;
-    --third-text-color :  hsl(193, 38%, 86%);
-    --secondary-text-color : hsl(150, 100%, 66%);
-    --border-radius : 15px;
+    --main-bg-color: hsl(218, 23%, 16%);
+    --secondary-bg-color: hsl(217, 19%, 24%);
+    --main-text-color: white;
+    --main-font-size: clamp(16px, 2vw, 23px); 
+    --third-text-color: hsl(193, 38%, 86%);
+    --secondary-text-color: hsl(150, 100%, 66%);
+    --border-radius: 15px;
 }
+
 
 @font-face {
   font-family: "Manrope-Regular";
@@ -17,6 +18,7 @@
 body {
      background-color: var(--main-bg-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 99vw;
@@ -37,14 +39,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 30vw;
-    height: 30vh;
+    width: 50vw;
+    height: 35vh;
     background-color: var(--secondary-bg-color);
     border-radius: var(--border-radius);
 }
 
 .advice-number {
-    font-size: small;
     letter-spacing: 5px;
     color: var(--secondary-text-color);
 }
@@ -57,7 +58,37 @@ body {
 .divider-image {
     width: 80%;
 }
-/* ### Font
 
-- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
-- Weights: 800 */
+.button-container {
+    cursor: pointer;
+    margin-bottom: -38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--secondary-text-color);
+    border: 3px solid var(--secondary-text-color);
+    transition: 500ms;
+}
+
+
+.button-container:hover {
+    box-shadow: 0 0 8px 3px hsl(150, 100%, 66%), 0 0 16px 6px hsl(150, 100%, 66%);
+}
+
+
+.loading {
+    margin-top: 2rem;
+    visibility: hidden;
+}
+
+
+@media (max-width: 425px) {
+.advice-container {
+    width: 80vw;
+    height: 30vh;
+}
+}
