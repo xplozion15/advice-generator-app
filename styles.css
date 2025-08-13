@@ -88,12 +88,16 @@ body {
 
 @media (max-width: 425px) {
 .advice-container {
+    padding: 1rem; 
     width: 80vw;
     height: 30vh;
 }
 
 .button-container {
-    -webkit-tap-highlight-color: transparent; /* removes blue highlight on mobile */
-    outline: none; /* removes default outline */
+    -webkit-tap-highlight-color: transparent; 
+    outline: none; 
 }
+
+
+
 }
